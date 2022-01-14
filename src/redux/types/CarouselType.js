@@ -1,0 +1,1 @@
+export const SET_CAROUSEL_HOME = "SET_CAROUSEL_HOME";
