@@ -1,7 +1,7 @@
 import React, { memo, useEffect } from "react";
 import { Button } from "@tsamantanis/react-glassmorphism";
 import { CustomCard } from "@tsamantanis/react-glassmorphism";
-import "../../assets/styles/circle.scss";
+import "../../assets/styles/circle.css";
 
 import "@tsamantanis/react-glassmorphism/dist/index.css";
 import { Tabs, Radio, Space } from "antd";
@@ -37,7 +37,7 @@ export default function DetailFilm(props) {
         borderRadius={0}
       >
         <div className="grid grid-cols-10">
-          <div className="col-span-5 col-start-3">
+          <div className="col-span-5 col-start-2">
             <div className="grid grid-cols-3 gap-5">
               <img
                 className="col-span-1"
@@ -45,7 +45,7 @@ export default function DetailFilm(props) {
                 style={{ width: "250px", height: "350px" }}
                 alt=""
               />
-              <div className="col-span-2" style={{ marginTop: "25%" }}>
+              <div className="col-span-2 pl-5" style={{ marginTop: "25%" }}>
                 <p className="text-sm">
                   Ngày chiếu:{" "}
                   {moment(filmDetail.ngayKhoiChieu).format("DD-MM-YYYY")}
@@ -57,14 +57,13 @@ export default function DetailFilm(props) {
               </div>
             </div>
           </div>
-          <div className="col-span-3">
-            <div className="pacss-wrapper">
-              <span className="pacss-foreground">
-                <span className="pacss-number">{filmDetail.danhGia * 10}</span>
-              </span>
-              <span
-                className={`pacss pacss-${filmDetail.danhGia * 10} pacss-big`}
-              />
+          <div className="col-span-3 col-start-8">
+            <div className={`c100 p${filmDetail.danhGia * 10} big green`}>
+              <span>{filmDetail.danhGia * 10}</span>
+              <div className="slice">
+                <div className="bar" />
+                <div className="fill" />
+              </div>
             </div>
           </div>
         </div>
